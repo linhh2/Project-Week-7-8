@@ -1,0 +1,419 @@
+
+
+body{
+    width: 100%;
+    margin: 0 auto;
+    background-color: rgb(248, 247, 247);
+}
+
+#bar-wrapper{
+    position: fixed;
+    display: flex;
+    padding-left: 15%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    border: 1px solid #e4e4e4 ;
+    background-color: white;
+    
+}
+
+.bar{
+    display: flex;
+    align-items: center;
+    height: 65px;
+    width: 70%;
+}
+
+.header-logo{
+    flex: 6;
+    order: 1;
+    width: auto;
+    cursor: pointer;
+}
+
+.header-search{
+    flex: 5;
+    order: 2;
+    padding-right: 9%;
+
+    width: 250px;
+    height: 25px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 7px;
+}
+
+.header-search > i {
+    font-size: 15px;
+    color: grey ;
+    padding-left: 9px;
+}
+
+.header-search > input{
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 15px; 
+    background-color: #f4f4f4;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+.header-icon{
+    flex: 5;
+    order: 3;
+    padding-left: 3%;
+    
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-gap: 0.5em;
+    font-size: 27px;
+    cursor: pointer;
+}
+
+#introduction{
+    display: flex;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-top: 5%;
+}
+
+.intro{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    width: 60%;
+
+}
+.avatar{
+    padding: 15px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    
+}
+
+.avatar img{
+    width: 65%;
+    border-radius: 50%;
+    /** border: 3px solid;
+    border-image-source: linear-gradient(to right, #f64f59, #ed71c8, #f1753b); 
+    border-image-slice :1; **/ /** em kiem duoc border mau gradient nhung em khong biet lam the nao cho no bo tron lai **/
+    
+}     
+
+.bio{
+    padding-right: 30% ;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 15px;
+}
+
+.bio-1{
+    display: grid;
+    grid-template-columns: 3.5fr 2fr 0.8fr 1fr;
+    grid-gap: 0.5em;
+    align-items: center;
+    cursor: pointer;
+}
+
+.bio-1 p{
+    flex: 3;
+    font-size: 30px;
+}
+
+.button{
+    background-color: rgb(76, 150, 235); 
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-weight: bolder;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    
+}
+
+.button:hover{
+    color: black;
+}
+
+.bio-2{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    cursor: pointer;
+}
+
+.bio-3 a{
+    text-decoration: none;
+    color: rgb(31, 31, 105);
+    font-weight: bold;
+}
+
+#highlights{
+    display: flex;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 70%;
+    margin-top: 5%;
+    padding-left: 14%;
+    cursor: pointer;
+}
+
+#highlights img{
+    width: 45%;
+    border-radius: 50%;
+    border: 3px solid rgb(224, 224, 224);
+    
+}
+
+.highlight-title{
+    font-size: 15px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#profile{
+    display: flex;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+#container{
+    width: 70%;
+    border-top: 1px solid #e4e4e4 ;
+    cursor: pointer;
+}
+
+.navbar{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-gap: 3em;
+    justify-items: center;
+    margin: 15px 10%;
+    height: 45px;
+    width: 70%;
+}
+
+.navbar a:hover{
+    color: black;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: #858585 ;
+    font-family: "MS Sans Serif", Geneva, sans-serif ;
+    font-size: 13px;
+} 
+
+#photos{
+    display: flex;
+    gap: 2em;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+.image{
+    position: relative;
+    width: 300px;
+}   
+
+.img{
+    width: 300px;
+    height: 300px;
+    display: block;
+    width: 100%;
+    margin-top: 2em;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.342);
+    color: white;
+    font-family: "Quicksand", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity:0;
+    transition: opacity 0.1s;
+}
+
+.overlay:hover{
+    opacity: 1;
+
+}
+
+
+footer{
+    padding-left: 25%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 12px;
+    color: #858585;
+    margin-top: 30px;
+    
+}
+
+
+.footer-2{
+    display: flex;
+    align-items: center;
+    gap: 4em;
+    padding-left: 19%;
+}
+
+.footer-1{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    cursor: pointer;
+}
+
+
+                                    /* IPAD */
+/* IMPORTANT !! Tablet devices (landscape tablets, 600px - 768px) */
+@media screen and (max-width: 768px) {
+    body {
+      width: 100%;
+    }
+    #introduction{
+        margin-top: 14%;
+    }
+    #bar-wrapper{
+        padding-left: 0%;
+        width: 100%;
+    }
+    .header-search{
+        display: none;
+    }
+    .header-icon{
+        padding-left: 19%;
+        grid-gap: 1em;
+        font-size: 25px;
+    }
+    #introduction{
+        justify-content: start;
+        padding-left: 2%;
+        margin-top: 11%;
+        padding-top: 1%;
+    }
+    .avatar img{
+        width: 120%;
+
+    }
+    .bio{
+        padding-left: 10%;
+    }
+    .bio-1{
+        padding-bottom: 3%;
+    }
+
+
+    .bio-3{
+        width: 350px;
+        font-size: 13.5px;
+    }
+
+    #highlights{
+        padding-left: 3%;
+        width: 80%;
+    }
+    #highlights img{
+        width: 79%;
+    }
+
+    /**
+    #ipad-design1{
+        display: contents;
+        width: 100%;
+        border: 1px solid #858585;
+    }
+    .ipad-bio2{
+        width: 100%;  
+    
+    }
+
+    .ipad-bio2 .r1{
+        width: 80%;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        justify-content: end;
+        grid-gap: 5em;
+        padding-left: 20%;
+        height: 40px;
+    }
+
+    .ipad-bio2 .r2{
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 1em;
+        justify-content: center;
+        padding-left: 16%;
+        height: 40px;
+        color: rgb(161, 161, 161);
+    }
+
+    .ipad-bio2 hr{
+        color: rgb(214, 214, 214);
+
+    }
+
+
+    .ipad-navbar{
+        display: contents;
+        border: 1px solid #858585;
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        
+        margin-top: 0%;
+    }
+    */
+
+    #container{
+        margin-left: 0%;
+    }
+    
+
+    #profile{
+        padding-left: 0%;
+        width: 80%;
+    }
+
+
+/*  Desktop Large Screen */
+@media screen and (min-width: 1920px) {
+    .container {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+  
+  /* Laptop Medium Screen (1024px - 1440px) */
+  @media screen and (max-width: 1440px) {
+  }
+  
+  /* IMPORTANT !! Laptop Small Screen (768px - 1024px) */
+  @media screen and (max-width: 1024px) {
+    .container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  
+  
+  /* IMPORTANT !! Mobile devices (phones, 600px and down) */
+  @media screen and (max-width: 600px) {
+    .container {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
